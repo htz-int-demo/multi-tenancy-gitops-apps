@@ -5,6 +5,7 @@ metadata:
     app: cnkt-event-listener
     app.kubernetes.io/instance: apps-lauren-demo-rest-ci-1
   name: cnkt-event-listener
+  namespace: ci
 spec:
   serviceAccountName: pipeline
   triggers:
