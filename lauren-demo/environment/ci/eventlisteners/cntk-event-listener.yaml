@@ -1,0 +1,21 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  labels:
+    app: cnkt-event-listener
+  name: cnkt-event-listener
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - name: lauren-demo-dev
+      interceptors:
+        - ref:
+            name: "cel"
+          params:
+          - name: "filter"
+            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/lauren-demo-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/lauren-demo'"
+      bindings:
+        - ref: cnkt-trigger-binding
+      template:
+        ref: lauren-demo-dev
+      
