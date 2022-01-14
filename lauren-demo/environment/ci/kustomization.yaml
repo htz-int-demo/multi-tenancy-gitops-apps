@@ -9,7 +9,6 @@ resources:
 - secrets/artifactory-access-secret.yaml
 - secrets/git-credentials-secret.yaml
 - secrets/ibm-entitled-registry-credentials-secret.yaml
-# - tasks/0-setup.yaml
 - tasks/1-java-maven-test.yaml
 - tasks/2-lint-dockerfile.yaml
 - tasks/4-deploy.yaml
@@ -25,11 +24,3 @@ resources:
 - tasks/ibm-tag-release.yaml
 - triggerbindings/cntk-binding.yaml
 - triggertemplates/lauren-demo-dev.yaml
-
-# - roles/custom-pipeline-sa-clusterrole.yaml
-# - roles/custom-pipeline-sa-role.yaml
-# - roles/custom-staging-pipeline-sa-rolebinding.yaml
-# - roles/custom-prod-pipeline-sa-rolebinding.yaml
-# - pipelines/ibm-test-pipeline-for-stage.yaml
-# #- pipelines/java-maven-dev-pipeline.yaml
-# - pipelines/lauren-demo-pipeline-dev.yaml
