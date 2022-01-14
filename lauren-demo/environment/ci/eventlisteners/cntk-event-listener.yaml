@@ -3,20 +3,30 @@ kind: EventListener
 metadata:
   labels:
     app: cnkt-event-listener
-    app.kubernetes.io/instance: apps-lauren-demo-rest-ci-1
   name: cnkt-event-listener
-  namespace: ci
 spec:
   serviceAccountName: pipeline
   triggers:
-    - bindings:
-        - ref: cnkt-trigger-binding
+    # - name: mq-infra-dev
+    #   interceptors:
+    #     - ref:
+    #         name: "cel"
+    #       params:
+    #       - name: "filter"
+    #         value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/qm1-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/lauren-demo'"
+    #   bindings:
+    #     - ref: cnkt-trigger-binding
+    #   template:
+    #     ref: lauren-demo-dev
+    - name: lauren-demo-dev
       interceptors:
-        - params:
-            - name: "filter"
-              value: "header.match('X-GitHub-Event', 'push') && body.ref =='refs/heads/lauren-demo-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/lauren-demo'"
-          ref:
+        - ref:
             name: "cel"
-      name: lauren-demo-dev
+          params:
+          - name: "filter"
+            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/lauren-demo-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/lauren-demo'"
+      bindings:
+        - ref: cnkt-trigger-binding
       template:
         ref: lauren-demo-dev
+      
