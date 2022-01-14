@@ -2,7 +2,7 @@ resources:
 - configmaps/gitops-repo-configmap.yaml
 - eventlisteners/cntk-event-listener.yaml
 - pipelines/ibm-lauren-dev-stage.yaml
-- pipelines/lauren-demo-dev-pipeline.yaml
+- pipelines/lauren-demo-dev.yaml
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
 - roles/custom-dev-pipeline-sa-rolebinding.yaml
 - routes/cntk-route.yaml
