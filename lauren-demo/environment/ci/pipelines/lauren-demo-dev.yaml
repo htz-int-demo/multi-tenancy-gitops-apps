@@ -41,25 +41,6 @@ spec:
           value: $(params.git-revision)
         - name: scan-image
           value: $(params.scan-image)
-        # - name: lint-dockerfile
-        #   value: $(params.lint-dockerfile)
-    # - name: test
-    #   taskRef:
-    #     name: ibm-javascript-test
-    #   runAfter:
-    #     - setup
-    #   params:
-    #     - name: git-url
-    #       value: "$(tasks.setup.results.git-url)"
-    #     - name: git-revision
-    #       value: "$(tasks.setup.results.git-revision)"
-    #     - name: source-dir
-    #       value: "$(tasks.setup.results.source-dir)"
-    #     - name: js-image
-    #       value: $(tasks.setup.results.js-image)
-    #     - name: app-name
-    #       value: "$(tasks.setup.results.app-name)"
-
     - name: dockerfile-lint
       taskRef:
         name: ibm-dockerfile-lint
@@ -95,62 +76,11 @@ spec:
           value: "$(tasks.setup.results.image-repository)"
         - name: image-tag
           value: "$(tasks.setup.results.image-tag)"
-        
-    # - name: deploy
-    #   taskRef:
-    #     name: ibm-deploy
-    #   runAfter:
-    #     - build
-    #   params:
-    #     - name: git-url
-    #       value: "$(tasks.setup.results.git-url)"
-    #     - name: git-revision
-    #       value: "$(tasks.setup.results.git-revision)"
-    #     - name: source-dir
-    #       value: "$(tasks.setup.results.source-dir)"
-    #     - name: image-server
-    #       value: "$(tasks.setup.results.image-server)"
-    #     - name: image-namespace
-    #       value: "$(tasks.setup.results.image-namespace)"
-    #     - name: image-repository
-    #       value: "$(tasks.setup.results.image-repository)"
-    #     - name: image-tag
-    #       value: "$(tasks.setup.results.image-tag)"
-    #     - name: app-namespace
-    #       value: "$(tasks.setup.results.app-namespace)"
-    #     - name: app-name
-    #       value: "$(tasks.setup.results.app-name)"
-    #     - name: deploy-ingress-type
-    #       value: "$(tasks.setup.results.deploy-ingress-type)"
-    #     - name: tools-image
-    #       value: "$(tasks.setup.results.tools-image)"
-    # - name: health
-    #   taskRef:
-    #     name: ibm-health-check
-    #   runAfter:
-    #     - build #deploy
-    #   params:
-    #     - name: app-namespace
-    #       value: "$(tasks.setup.results.app-namespace)"
-    #     - name: app-name
-    #       value: "$(tasks.setup.results.app-name)"
-        # - name: deploy-ingress-type
-        #   value: "$(tasks.setup.results.deploy-ingress-type)"
-        # - name: health-protocol
-        #   value: "$(tasks.setup.results.health-protocol)"
-        # - name: health-endpoint
-        #   value: "$(tasks.setup.results.health-endpoint)"
-        # - name: health-url
-        #   value: "$(tasks.setup.results.health-url)"
-        # - name: health-curl
-        #   value: "$(tasks.setup.results.health-curl)"
-        # - name: tools-image
-        #   value: "$(tasks.setup.results.tools-image)"
     - name: tag-release
       taskRef:
         name: ibm-tag-release
       runAfter:
-        - build #health
+        - build
       params:
         - name: git-url
           value: "$(tasks.setup.results.git-url)"
@@ -178,10 +108,6 @@ spec:
       params:
         - name: image-url
           value: $(tasks.img-release.results.image-url)
-#         - name: scan-trivy
-#           value: $(tasks.setup.results.scan-trivy)
-#         - name: scan-ibm
-#           value: $(tasks.setup.results.scan-ibm)
     - name: helm-release
       taskRef:
         name: ibm-helm-release
