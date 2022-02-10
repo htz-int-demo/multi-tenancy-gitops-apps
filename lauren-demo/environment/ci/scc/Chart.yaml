@@ -1,4 +1,4 @@
-apiVersion: v3
+apiVersion: v2
 name: tekton-pipeline-scc
 version: 0.1.0
 appVersion: 1.16.0
