@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 
 # Set variables
-if [[ -z ${GIT_ORG} ]]; then
-  echo "Please provide environment variable GIT_ORG"
-  exit 1
-fi
-
-# GIT_BRANCH_QM1=${GIT_BRANCH_QM1:-master}
+GIT_ORG=${GIT_ORG:-client-engineering-gitops-h} 
+echo $GIT_ORG
 GIT_BRANCH_LAUREN=${GIT_BRANCH_LAUREN:-master}
+echo $GIT_BRANCH_LAUREN
 
 # Create Kubernetes Secret yaml
-( echo "cat <<EOF" ; cat cntk-event-listener.yaml_template ; echo EOF ) | \
+( echo "cat <<EOF" ; cat cntk-event-listener.yaml_template ;) | \
 GIT_ORG=${GIT_ORG} \
-# GIT_BRANCH_QM1=${GIT_BRANCH_QM1:-master} \
-GIT_BRANCH_LAUREN=${GIT_BRANCH_LAUREN:-master} \
+GIT_BRANCH_LAUREN=${GIT_BRANCH_LAUREN} \
 sh > cntk-event-listener.yaml
