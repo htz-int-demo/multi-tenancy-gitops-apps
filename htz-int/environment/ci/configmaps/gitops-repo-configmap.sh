@@ -9,7 +9,7 @@ fi
 GIT_BRANCH=${GIT_BRANCH:-master}
 
 # Create Kubernetes Secret yaml
-( echo "cat <<EOF" ; cat gitops-repo-configmap.yaml_template ; echo EOF ) | \
+( echo "cat <<EOF" ; cat gitops-repo-configmap.yaml_template ; ) | \
 GIT_ORG=${GIT_ORG} \
 GIT_BRANCH=${GIT_BRANCH} \
 sh > gitops-repo-configmap.yaml
