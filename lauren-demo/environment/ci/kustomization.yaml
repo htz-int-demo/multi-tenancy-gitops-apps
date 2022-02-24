@@ -23,6 +23,6 @@ resources:
 - tasks/ibm-img-release.yaml
 - tasks/ibm-img-scan.yaml
 - tasks/ibm-setup.yaml
-#- tasks/ibm-tag-release.yaml
+- tasks/ibm-tag-release.yaml
 - triggerbindings/cntk-binding.yaml
 - triggertemplates/lauren-demo-dev.yaml
