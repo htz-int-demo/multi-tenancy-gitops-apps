@@ -3,7 +3,7 @@ resources:
 - eventlisteners/cntk-event-listener.yaml
 # - pipelines/ibm-htz-dev-stage.yaml
 - pipelines/ibm-lauren-dev-stage.yaml
-- pipelines/lauren-demo-dev.yaml
+- pipelines/htz-int-dev.yaml
 # - pipelines/htz-integration-dev.yaml
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
 - roles/custom-dev-pipeline-sa-rolebinding.yaml
@@ -25,4 +25,4 @@ resources:
 - tasks/ibm-setup.yaml
 - tasks/ibm-tag-release.yaml
 - triggerbindings/cntk-binding.yaml
-- triggertemplates/lauren-demo-dev.yaml
+- triggertemplates/htz-int-dev.yaml

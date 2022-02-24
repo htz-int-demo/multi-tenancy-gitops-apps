@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: lauren-demo-dev
+  name: htz-int-dev
   annotations:
     app.openshift.io/runtime: openjdk
     app.openshift.io/builder: maven
@@ -23,7 +23,7 @@ spec:
       default: dev
     - name: app-path
       description: Path in gitops repo
-      default: lauren-demo/environment
+      default: htz-int/environment
     - name: security
       description: Enable security for queueManager
       default: "false"

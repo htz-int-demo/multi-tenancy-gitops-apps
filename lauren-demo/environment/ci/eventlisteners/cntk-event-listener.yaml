@@ -7,15 +7,15 @@ metadata:
 spec:
   serviceAccountName: pipeline
   triggers:
-  - name: lauren-demo-dev
+  - name: htz-int-dev
     interceptors:
     - ref:
         name: "cel"
       params:
       - name: "filter"
-        value: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/master' && body.repository.full_name == 'client-engineering-gitops-h/lauren-demo'
+        value: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/master' && body.repository.full_name == 'client-engineering-gitops-htz/htz-int'
     bindings:
     - kind: TriggerBinding
       ref: cnkt-trigger-binding
     template:
-      ref: lauren-demo-dev
+      ref: htz-int-dev

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: staging-lauren-demo-instance
+  name: staging-htz-int-instance
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   finalizers:
@@ -12,8 +12,8 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: lauren-demo/environment/staging/lauren-demo
-    repoURL: https://github.com/client-engineering-gitops-h/multi-tenancy-gitops-apps.git
+    path: htz-int/environment/staging/htz-int
+    repoURL: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
     targetRevision: master
     helm:
       valueFiles:
