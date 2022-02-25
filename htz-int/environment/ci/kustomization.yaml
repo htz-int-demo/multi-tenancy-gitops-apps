@@ -2,7 +2,7 @@ resources:
 - configmaps/gitops-repo-configmap.yaml
 - eventlisteners/cntk-event-listener.yaml
 - pipelines/ibm-htz-dev.yaml
-- pipelines/ibm-htz-int-dev-stage.yaml
+- pipelines/ibm-htz-int-dev.yaml
 - pipelines/htz-int-dev.yaml
 - pipelines/htz-integration-dev.yaml
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
