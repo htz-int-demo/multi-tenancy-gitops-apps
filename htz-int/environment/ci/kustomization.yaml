@@ -3,7 +3,6 @@ resources:
 - eventlisteners/cntk-event-listener.yaml
 - pipelines/ibm-htz-dev.yaml
 - pipelines/htz-int-dev.yaml
-- pipelines/htz-integration-dev.yaml
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
 - roles/custom-dev-pipeline-sa-rolebinding.yaml
 - routes/cntk-route.yaml
