@@ -1,0 +1,4 @@
+apiVersion: v2
+version: 0.1.0
+name: htz-integration
+description: Chart to configure ArgoCD with the htz-integration project and its applications
