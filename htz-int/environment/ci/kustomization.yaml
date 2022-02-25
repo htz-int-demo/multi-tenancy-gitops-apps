@@ -12,7 +12,7 @@ resources:
 - routes/cntk-route.yaml
 
 - secrets/artifactory-access-secret.yaml
-- secrets/git-credentials-secret.yaml
+#- secrets/git-credentials-secret.yaml
 - secrets/ibm-entitled-registry-credentials-secret.yaml
 
 - tasks/1-java-maven-test.yaml
