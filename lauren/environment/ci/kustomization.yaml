@@ -1,25 +1,14 @@
 resources:
 - configmaps/gitops-repo-configmap.yaml
-
 - eventlisteners/cntk-event-listener.yaml
-
 - pipelines/ibm-lauren-dev-stage.yaml
-- pipelines/lauren-demo.yaml
-
-
+- pipelines/lauren-demo-dev.yaml
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
 - roles/custom-dev-pipeline-sa-rolebinding.yaml
-
-
-
 - routes/cntk-route.yaml
-
 - secrets/artifactory-access-secret.yaml
 - secrets/git-credentials-secret.yaml
 - secrets/ibm-entitled-registry-credentials-secret.yaml
-
-
-
 - tasks1/-java-maven-test.yaml
 - tasks/2-lint-dockerfile.yaml
 - tasks/4-deploy.yaml
@@ -33,9 +22,5 @@ resources:
 - tasks/ibm-img-scan.yaml
 - tasks/ibm-setup.yaml
 - tasks/ibm-tag-release.yaml
-
-
-
 - triggerbindings/cntk-binding.yaml
-
 - triggertemplates/lauren-dev.yaml
