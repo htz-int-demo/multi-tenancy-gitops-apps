@@ -4,7 +4,7 @@ resources:
 - eventlisteners/cntk-event-listener.yaml
 
 - pipelines/ibm-lauren-dev-stage.yaml
-- pipelines/lauren-demo-dev.yaml
+- pipelines/lauren-demo.yaml
 
 
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
