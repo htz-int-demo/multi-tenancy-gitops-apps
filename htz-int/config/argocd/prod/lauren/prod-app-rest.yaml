@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-htz-int-rest-staging-1
+  name: apps-htz-int-rest-prod-1
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: staging
+    namespace: prod
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: htz-int/environment/staging/htz-int
+    path: htz-int/environment/prod/lauren-demo
     repoURL: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:
