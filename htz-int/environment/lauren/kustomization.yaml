@@ -1,5 +1,5 @@
 resources:
-- lauren/configmaps/gitops-repo-configmap.yaml
+- configmaps/gitops-repo-configmap.yaml
 
 - eventlisteners/cntk-event-listener.yaml
 
