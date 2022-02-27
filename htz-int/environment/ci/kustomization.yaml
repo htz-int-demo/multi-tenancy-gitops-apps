@@ -5,6 +5,8 @@ resources:
 
 - pipelines/htz-int-dev.yaml
 - pipelines/ibm-htz-dev.yaml
+- pipelines/ibm-lauren-dev-stage.yaml
+- pipelines/lauren-demo-dev.yaml
 
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
 - roles/custom-dev-pipeline-sa-rolebinding.yaml

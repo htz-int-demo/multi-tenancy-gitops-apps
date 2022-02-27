@@ -9,8 +9,8 @@ metadata:
 data:
   branch: master
   host: github.com
-  org: client-engineering-gitops-htz
-  owner: client-engineering-gitops-htz
+  org: client-engineering-gitops-h
+  owner: client-engineering-gitops-h
   parentdir: .
   protocol: https
   repo: multi-tenancy-gitops-apps
