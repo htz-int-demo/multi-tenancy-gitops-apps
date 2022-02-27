@@ -1,4 +1,4 @@
 apiVersion: v2
-version: 0.0.1
+version: 0.1.0
 name: lauren-demo-dev
 description: Chart to configure ArgoCD with the lauren-demo-dev project and its applications
