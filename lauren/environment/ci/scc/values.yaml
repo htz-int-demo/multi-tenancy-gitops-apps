@@ -2,6 +2,6 @@
 global: {}
 
 service-account:
-  name: pipeline
+  name: pipeline-lauren
   create: true
   sccs: ["privileged"]
