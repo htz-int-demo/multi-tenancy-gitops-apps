@@ -5,7 +5,7 @@ metadata:
     app: cnkt-event-listener-lauren
   name: cnkt-event-listener-lauren
 spec:
-  serviceAccountName: pipeline
+  serviceAccountName: pipeline-lauren
   triggers:
   - name: lauren-dev
     interceptors:

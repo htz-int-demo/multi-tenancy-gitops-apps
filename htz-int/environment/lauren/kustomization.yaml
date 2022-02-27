@@ -1,0 +1,41 @@
+resources:
+- configmaps/lauren/gitops-repo-configmap.yaml
+
+- eventlisteners/lauren/cntk-event-listener.yaml
+
+- pipelines/lauren/ibm-lauren-dev-stage.yaml
+- pipelines/lauren/lauren-demo-dev.yaml
+
+
+- roles/lauren/custom-ci-pipeline-sa-rolebinding.yaml
+- roles/lauren/custom-dev-pipeline-sa-rolebinding.yaml
+
+
+
+- routes/lauren/cntk-route.yaml
+
+- secrets/lauren/artifactory-access-secret.yaml
+- secrets/lauren/git-credentials-secret.yaml
+- secrets/lauren/ibm-entitled-registry-credentials-secret.yaml
+
+
+
+- tasks/lauren/1-java-maven-test.yaml
+- tasks/lauren/2-lint-dockerfile.yaml
+- tasks/lauren/4-deploy.yaml
+- tasks/lauren/4-smoke-test.yaml
+- tasks/lauren/5-health-check.yaml
+- tasks/lauren/10-gitops.yaml
+- tasks/lauren/ibm-build-tag-push.yaml
+- tasks/lauren/ibm-functional-test.yaml
+- tasks/lauren/ibm-helm-release.yaml
+- tasks/lauren/ibm-img-release.yaml
+- tasks/lauren/ibm-img-scan.yaml
+- tasks/lauren/ibm-setup.yaml
+- tasks/lauren/ibm-tag-release.yaml
+
+
+
+- triggerbindings/lauren/cntk-binding.yaml
+
+- triggertemplates/lauren/lauren-dev.yaml
