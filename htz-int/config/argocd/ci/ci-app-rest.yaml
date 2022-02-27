@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-lauren-rest-ci
+  name: apps-htz-int-rest-ci
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   finalizers:
@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: htz-int/environment/lauren/
+    path: htz-int/environment/
     repoURL: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:

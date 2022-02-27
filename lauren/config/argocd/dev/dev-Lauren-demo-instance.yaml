@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: htz-int/environment/dev/lauren-demo
+    path: lauren/environment/dev/lauren-demo
     repoURL: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
     targetRevision: master
     helm:

@@ -5,7 +5,7 @@ metadata:
   namespace: ci
 subjects:
   - kind: ServiceAccount
-    name: pipeline
+    name: pipeline-lauren
     namespace: ci
 roleRef:
   apiGroup: rbac.authorization.k8s.io
