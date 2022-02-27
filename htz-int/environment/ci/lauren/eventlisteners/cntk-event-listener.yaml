@@ -2,20 +2,20 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener
 metadata:
   labels:
-    app: cnkt-event-listener
-  name: lauren-cnkt-event-listener
+    app: cnkt-event-listener-lauren
+  name: cnkt-event-listener-lauren
 spec:
   serviceAccountName: pipeline
   triggers:
-  - name: lauren-demo-dev
+  - name: lauren-dev
     interceptors:
     - ref:
         name: "cel"
       params:
       - name: "filter"
-        value: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/master' && body.repository.full_name == 'client-engineering-gitops-htz/lauren-demo'
+        value: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/master' && body.repository.full_name == 'client-engineering-gitops-htz/htz-int'
     bindings:
     - kind: TriggerBinding
       ref: cnkt-trigger-binding
     template:
-      ref: lauren-demo-dev
+      ref: lauren-dev

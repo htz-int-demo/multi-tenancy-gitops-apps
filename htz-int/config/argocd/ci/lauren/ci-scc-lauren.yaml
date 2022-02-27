@@ -15,7 +15,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: htz-int/environment/ci/scc/lauren
+    path: htz-int/environment/ci/lauren/scc
     repoURL: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:
