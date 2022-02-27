@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-htz-int-rest-ci-1
+  name: apps-lauren-rest-ci
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   finalizers:
