@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: ibm-setup
+  name: ibm-setup-lauren
   annotations:
     description: Sets up the pipeline environment and generates/normalizes a number of param values
     app.openshift.io/description: Sets up the pipeline environment and generates/normalizes a number of param values

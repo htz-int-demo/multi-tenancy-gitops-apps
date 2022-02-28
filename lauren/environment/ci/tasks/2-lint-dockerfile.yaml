@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: ibm-dockerfile-lint
+  name: ibm-dockerfile-lint-lauren
   annotations:
     description: Optional linter for Dockerfiles; if a ".hadolint" file is in the repo root, this task automatically picks up; otherwise hadolint file name must be passed via ConfigMap. See Hadolint on Dockerhub for more
     app.openshift.io/description: Optional linter for Dockerfiles; if a ".hadolint" file is in the repo root, this task automatically picks up; otherwise hadolint file name must be passed via ConfigMap

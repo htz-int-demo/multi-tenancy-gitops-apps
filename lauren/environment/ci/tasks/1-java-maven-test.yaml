@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: ibm-java-maven
+  name: ibm-java-maven-lauren
   annotations:
     description: Executes build, test, and sonarscan logic for a Java maven application
     app.openshift.io/description: Executes build, test, and sonarscan logic for a Java maven application

@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: ibm-functional-test
+  name: ibm-functional-test-lauren
   annotations:
     description: Perfrom functional tests
     app.openshift.io/description: Functional tests
