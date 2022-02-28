@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: ibm-health-check-lauren
+  name: ibm-health-check
   annotations:
     description: Performs a health check on the queue manager
     app.openshift.io/description: Performs a health check on the queue manager
