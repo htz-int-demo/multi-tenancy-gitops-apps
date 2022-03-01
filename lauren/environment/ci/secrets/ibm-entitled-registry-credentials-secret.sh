@@ -12,7 +12,7 @@ SEALED_SECRET_NAMESPACE=${SEALED_SECRET_NAMESPACE:-sealed-secrets}
 SEALED_SECRET_CONTOLLER_NAME=${SEALED_SECRET_CONTOLLER_NAME:-sealed-secrets}
 
 # Create Kubernetes Secret yaml
-oc create secret generic ibm-entitled-registry-credentials \
+oc create secret generic ibm-entitled-registry-credentials-lauren \
 --from-literal=IBM_ENTITLED_REGISTRY_USER=cp \
 --from-literal=IBM_ENTITLED_REGISTRY_PASSWORD=${IBM_ENTITLEMENT_KEY} \
 --dry-run=client -o yaml > delete-ibm-entitled-registry-credentials-secret.yaml

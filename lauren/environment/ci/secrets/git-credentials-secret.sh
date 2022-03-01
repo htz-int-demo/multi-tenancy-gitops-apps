@@ -19,7 +19,7 @@ cat <<EOF > delete-git-credentials-secret.yaml
 apiVersion: v1
 kind: Secret
 metadata:
-  name: git-credentials
+  name: git-credentials-lauren
   annotations:
     tekton.dev/git-0: https://github.com
 type: kubernetes.io/basic-auth
