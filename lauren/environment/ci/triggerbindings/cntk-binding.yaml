@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   labels:
-    app: cnkt-trigger-binding
+    app: cnkt-trigger-binding-lauren
   name: cnkt-trigger-binding-lauren
 spec:
   params:
