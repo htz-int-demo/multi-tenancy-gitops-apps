@@ -13,7 +13,7 @@ spec:
   project: applications
   source:
     path: lauren/environment/staging/lauren-demo
-    repoURL: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
+    repoURL: https://github.com/htz-int-demo/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:
     automated:

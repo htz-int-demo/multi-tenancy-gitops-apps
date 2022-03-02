@@ -9,9 +9,9 @@ metadata:
 data:
   branch: master
   host: github.com
-  org: client-engineering-gitops-htz
-  owner: client-engineering-gitops-htz
+  org: htz-int-demo
+  owner: htz-int-demo
   parentdir: .
   protocol: https
   repo: multi-tenancy-gitops-apps
-  url: https://github.com/client-engineering-gitops-htz/multi-tenancy-gitops-apps.git
+  url: https://github.com/htz-int-demo/multi-tenancy-gitops-apps.git

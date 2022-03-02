@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set variables
-GIT_ORG=${GIT_ORG:-client-engineering-gitops-htz} 
+GIT_ORG=${GIT_ORG:-htz-int-demo} 
 echo $GIT_ORG
 GIT_BRANCH_LAUREN=${GIT_BRANCH_LAUREN:-master}
 echo $GIT_BRANCH_LAUREN
