@@ -7,7 +7,7 @@ metadata:
 spec:
   serviceAccountName: pipeline
   triggers:
-  - name: lauren-demo
+  - name: lauren-demo-dev
     interceptors:
     - ref:
         name: "cel"
@@ -18,4 +18,4 @@ spec:
     - kind: TriggerBinding
       ref: cnkt-trigger-binding-lauren
     template:
-      ref: lauren-demo
+      ref: lauren-demo-dev
